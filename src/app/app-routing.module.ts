@@ -11,6 +11,11 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'cbinicio',
+    loadChildren: () => import('./conceptos-basicos/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+
 ];
 
 @NgModule({
