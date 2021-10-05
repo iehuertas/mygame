@@ -54,6 +54,18 @@ const routes: Routes = [
   {
     path: 'quiz-circ',
     loadChildren: () => import('./nivel4-circuitos/quiz-circ/quiz-circ.module').then( m => m.QuizCircPageModule)
+  },
+  {
+    path: 'inicio-res',
+    loadChildren: () => import('./nivel2-resistencias/inicio-res/inicio-res.module').then( m => m.InicioResPageModule)
+  },
+  {
+    path: 'inicio-mul',
+    loadChildren: () => import('./nivel3-multimetro/inicio-mul/inicio-mul.module').then( m => m.InicioMulPageModule)
+  },
+  {
+    path: 'inicio-cond',
+    loadChildren: () => import('./nivel5-condensadorescapacitancia/inicio-cond/inicio-cond.module').then( m => m.InicioCondPageModule)
   }
 ];
 
