@@ -36,6 +36,26 @@ const routes: Routes = [
     loadChildren: () => import('./nivel1-conceptosbasicos/quiz-cb/quiz-cb.module').then( m => m.QuizCbPageModule)
   },
   {
+    path: 'inicio-circ',
+    loadChildren: () => import('./nivel4-circuitos/inicio-circ/inicio-circ.module').then( m => m.InicioCircPageModule)
+  },
+  {
+    path: 'circuito-serie',
+    loadChildren: () => import('./nivel4-circuitos/circuito-serie/circuito-serie.module').then( m => m.CircuitoSeriePageModule)
+  },
+  {
+    path: 'circuito-paralelo',
+    loadChildren: () => import('./nivel4-circuitos/circuito-paralelo/circuito-paralelo.module').then( m => m.CircuitoParaleloPageModule)
+  },
+  {
+    path: 'circuito-serie-paralelo',
+    loadChildren: () => import('./nivel4-circuitos/circuito-serie-paralelo/circuito-serie-paralelo.module').then( m => m.CircuitoSerieParaleloPageModule)
+  },
+  {
+    path: 'quiz-circ',
+    loadChildren: () => import('./nivel4-circuitos/quiz-circ/quiz-circ.module').then( m => m.QuizCircPageModule)
+  },
+  {
     path: 'ley-de-ohm',
     loadChildren: () => import('./ley-de-ohm/ley-de-ohm.module').then( m => m.LeyDeOhmPageModule)
   },
@@ -51,7 +71,6 @@ const routes: Routes = [
     path: 'cparalelo',
     loadChildren: () => import('./nivel1/cparalelo/cparalelo.module').then( m => m.CparaleloPageModule)
   }
-
 ];
 
 @NgModule({

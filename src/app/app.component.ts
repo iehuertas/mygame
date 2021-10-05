@@ -17,7 +17,12 @@ export class AppComponent {
     ]},
     {title: 'Codigo de resistencias', url: 'codigo resistencias', icon: 'nuclear'},
     {title: 'Multimetro', url: 'multimetro', icon: 'clipboard'},
-    {title: 'Circuitos', url: 'circuitos', icon: 'sync-circle'},
+    {title: 'Circuitos', url: 'inicio-circ', icon: 'sync-circle', isOpen: false, child:[
+      {title: 'Circuitos en Serie', url: 'circuito-serie'},
+      {title: 'Circuitos en paralelo', url: 'circuito-paralelo'},
+      {title: 'Circuito en serie y paralelo', url: 'circuito-serie-paralelo'},
+      {title: 'Quiz', url: 'quiz-circ'}
+    ]},
     {title: 'Condensadores y capacitancia', url: 'condensadores-capacitancia', icon: 'scale'}
   ];
 
