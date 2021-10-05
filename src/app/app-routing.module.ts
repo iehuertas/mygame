@@ -54,22 +54,6 @@ const routes: Routes = [
   {
     path: 'quiz-circ',
     loadChildren: () => import('./nivel4-circuitos/quiz-circ/quiz-circ.module').then( m => m.QuizCircPageModule)
-  },
-  {
-    path: 'ley-de-ohm',
-    loadChildren: () => import('./ley-de-ohm/ley-de-ohm.module').then( m => m.LeyDeOhmPageModule)
-  },
-  {
-    path: 'corriente',
-    loadChildren: () => import('./nivel1/corriente/corriente.module').then( m => m.CorrientePageModule)
-  },
-  {
-    path: 'cserie',
-    loadChildren: () => import('./nivel1/cserie/cserie.module').then( m => m.CseriePageModule)
-  },
-  {
-    path: 'cparalelo',
-    loadChildren: () => import('./nivel1/cparalelo/cparalelo.module').then( m => m.CparaleloPageModule)
   }
 ];
 
