@@ -16,7 +16,7 @@ export class AppComponent {
       {title: 'Quiz', url: 'quiz-cb'}
     ]},
     {title: 'Codigo de resistencias', url: 'inicio-res', icon: 'nuclear'},
-    {title: 'Multimetro', url: 'inicio-mul', icon: 'clipboard'},
+    {title: 'Multímetro', url: 'inicio-mul', icon: 'clipboard'},
     {title: 'Circuitos', url: 'inicio-circ', icon: 'sync-circle', isOpen: false, child:[
       {title: 'Circuitos en Serie', url: 'circuito-serie'},
       {title: 'Circuitos en paralelo', url: 'circuito-paralelo'},
