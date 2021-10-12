@@ -7,16 +7,18 @@
 
         <ion-menu-toggle auto-hide="false" *ngFor="let item of appPages; let i = index">
           <ion-item routerDirection="root"  lines="none" detail="false">
-            <ion-icon slot="start" [ios]="item.icon + '-outline'" [md]="item.icon + '-sharp'"></ion-icon>
-            <ion-label [routerLink]="[item.url]"  routerLinkActive="selected">{{ item.title }}</ion-label>
-            <ion-icon slot="end" [name]="item.isOpen?'caret-down-outline':'caret-forward-outline'" (click)="item.isOpen = !item.isOpen" *ngIf="item.child?.length > 0"></ion-icon>
+            <ion-item [routerLink]="[item.url]">
+              <ion-icon slot="start" [ios]="item.icon + '-outline'" [md]="item.icon + '-sharp'"></ion-icon>
+              <ion-label routerLinkActive="selected">{{ item.title }}</ion-label>
+            </ion-item>
+            <ion-icon slot="end" [name]="item.isOpen?'caret-down-outline':'caret-forward-outline'" (click)="blockClick($event); item.isOpen = !item.isOpen" *ngIf="item.child?.length > 0"></ion-icon>
           </ion-item>
 
           <div *ngIf="item.isOpen">
             <ion-menu-toggle auto-hide="false" *ngFor="let subitem of item.child; let j = index">
               <ion-list lines="none">
                 <ion-item menuclose [hidden]="!item.isOpen" [routerLink]="[subitem.url]" class="sub-menu">
-                  <ion-label [routerLink]="[subitem.url]" routerLinkActive="selected">{{ subitem.title }}</ion-label>
+                  <ion-label routerLinkActive="selected">{{ subitem.title }}</ion-label>
                 </ion-item>
               </ion-list>
             </ion-menu-toggle>

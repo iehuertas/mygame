@@ -27,4 +27,8 @@ export class AppComponent {
   ];
 
   constructor() {}
+
+  blockClick(event) {
+    event.stopPropagation()
+  }
 }
