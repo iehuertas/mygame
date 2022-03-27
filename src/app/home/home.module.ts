@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-
+import { Game } from '../../game/game';
 
 @NgModule({
   imports: [
@@ -16,4 +16,20 @@ import { HomePageRoutingModule } from './home-routing.module';
   ],
   declarations: [HomePage]
 })
-export class HomePageModule {}
+export class HomePageModule {
+  /**
+   * Game instance
+   * @private
+   * @type {Game}
+   * @memberof HomePageModule
+   */
+  private gameInstance: Game;
+
+  /**
+   * Creates an instance of HomePageModule.
+   * @memberof HomePageModule
+   */
+  constructor() {
+    this.gameInstance = new Game();
+  }
+}
