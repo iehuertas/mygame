@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
+export class MyGame {
   public appPages = [
     {title: 'Home', url: 'home', icon: 'home'},
     {title: 'Conceptos Básicos', url: 'inicio-cb', icon: 'pulse', isOpen: false, child:[
